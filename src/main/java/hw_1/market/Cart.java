@@ -1,6 +1,5 @@
 package hw_1.market;
 
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Optional;
@@ -88,12 +87,6 @@ public class Cart<T extends Food> {
 
     public void printFoodstuffs()
     {
-        /*int index = 1;
-        for (var food : foodstuffs)
-            System.out.printf("[%d] %s (Белки: %s Жиры: %s Углеводы: %s)\n", index++, food.getName(), food.getProteins() ? "Да" : "Нет",
-                    food.getFats() ? "Да" : "Нет", food.getCarbohydrates() ? "Да" : "Нет");*/
-
-
         AtomicInteger index = new AtomicInteger(1);
         foodstuffs.forEach(food -> System.out.printf("[%d] %s (Белки: %s Жиры: %s Углеводы: %s)\n",
                 index.getAndIncrement(), food.getName(),
